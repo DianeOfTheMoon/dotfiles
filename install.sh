@@ -1,6 +1,6 @@
 git clone https://github.com/Homebrew/linuxbrew.git ~/.linuxbrew
-cat 'PATH="$HOME/.linuxbrew/bin:$PATH"' >> ~/.profile
-cat 'LD_LIBRARY_PATH="$HOME/.linuxbrew/lib:$LD_LIBRARY_PATH"' >> ~/.profile
+echo 'PATH="$HOME/.linuxbrew/bin:$PATH"' >> ~/.profile
+echo 'LD_LIBRARY_PATH="$HOME/.linuxbrew/lib:$LD_LIBRARY_PATH"' >> ~/.profile
 source ~/.profile
 brew install neovim
 sudo chsh -s `which zsh` `whoami`
