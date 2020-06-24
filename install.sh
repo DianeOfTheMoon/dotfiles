@@ -1,8 +1,7 @@
-git clone https://github.com/Homebrew/linuxbrew.git ~/.linuxbrew
-echo 'PATH="$HOME/.linuxbrew/bin:$PATH"' >> ~/.profile
-echo 'LD_LIBRARY_PATH="$HOME/.linuxbrew/lib:$LD_LIBRARY_PATH"' >> ~/.profile
-source ~/.profile
-brew install neovim
+curl -L --create-dirs https://github.com/neovim/neovim/releases/download/stable/nvim.appimage -o ~/bin/nvim.appimage
+chmod u+x ~/bin/nvim.appimage
+nvim.appimage --appimage-extract
+ln -s ~/bin/squashfs-root/usr/bin/nvim ~/bin/nvim
 sudo chsh -s `which zsh` `whoami`
 
 if [ -n "$SSH_KEY" ]; then
