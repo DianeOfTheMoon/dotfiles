@@ -6,6 +6,8 @@ chmod u+x ~/bin/nvim.appimage
 nvim.appimage --appimage-extract
 ln -s ~/bin/squashfs-root/usr/bin/nvim ~/bin/nvim
 
+sudo apt-get install -y zsh
+
 sudo chsh -s `which zsh` `whoami`
 
 if [ -n "$SSH_KEY" ]; then
