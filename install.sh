@@ -1,3 +1,4 @@
+#/bin/sh
 curl -L --create-dirs https://github.com/neovim/neovim/releases/download/stable/nvim.appimage -o ~/bin/nvim.appimage
 source ~/.profile
 
@@ -7,6 +8,9 @@ nvim.appimage --appimage-extract
 ln -s ~/bin/squashfs-root/usr/bin/nvim ~/bin/nvim
 
 sudo apt-get install -y zsh
+
+git config --global user.email "dianeofthemoon@gmail.com"
+git config --global user.name "Diane Cochran"
 
 sudo chsh -s `which zsh` `whoami`
 
